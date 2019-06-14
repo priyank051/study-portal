@@ -1,0 +1,381 @@
+<!doctype html>
+<html>
+<head>
+	<title> cse Portal</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="styl.css">
+</head>	
+<body>
+	<header>
+		<nav id="header-nav" class="navbar navbar-default">
+           <div class="container">
+                <div class="navbar-header">
+                   <a href="st.html" class="pull-left visible-sm visible-md visible-lg"><div id="logo-img" alt="Logo image"></div></a>
+               <div class="navbar-brand">
+        	       <a href="st.html"><h3>Juet Study Portal</h3></a></div>
+               <button type="button" class="navbar-toggle collapsed"
+                     data-toggle="collapse" data-target="#collapsable-nav" 
+                     aria-expanded="false">
+                    <span class="sr-only"> Toggle navigation </span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+               </button>	
+               </div>
+               <div id="collapsable-nav" class="collapse navbar-collapse">
+                   <ul id="nav-list" class="nav navbar-nav navbar-right">
+                       <li class="active">
+                           <a href="menu-categories.html">
+                              <span class="glyphicon glyphicon-book"></span><br class="hidden-xs">Core Subject</a>
+                       </li>
+                       <li>
+                           <a href="Core.html">
+                              <span class="glyphicon glyphicon-book"></span><br class="hidden-xs"> C++ Compiler</a>
+                       </li>
+                       <li>
+                           <a href="Core.html">
+                              <span class="glyphicon glyphicon-book"></span><br class="hidden-xs">Aptitude</a>
+                
+                       </li>
+                        <li>
+                           <a href="menu-categories1.html">
+                               <span class="glyphicon glyphicon-book"></span><br class="hidden-xs">Programming</a>
+                       </li>
+                       <li>
+                           <a href="menu-categories2.html">
+                               <span class="glyphicon glyphicon-book"></span><br class="hidden-xs">interview</a>
+                       </li>
+            
+                 </ul>       	
+               </div>	
+	</header>
+     <div id="main-content" class="container">
+      <h2 style="text-align: center">Array</h2><br>
+       <p>Array is a container which can hold a fix number of items and these items should be of the same type. Most of the data structures make use of arrays to implement their algorithms. Following are the important terms to understand the concept of Array.<br><br>
+
+<b>Element</b> − Each item stored in an array is called an element.<br><br>
+
+<b>Index</b> − Each location of an element in an array has a numerical index, which is used to identify the element.<br><br>
+
+<b>Array Representation</b><br>
+Arrays can be declared in various ways in different languages. For illustration, let's take C array declaration.<br><br>
+
+<b>Array Declaration</b><br>
+Arrays can be declared in various ways in different languages. For illustration, let's take C array declaration.<br><br>
+
+<b>Array Representation</b><br><br>
+As per the above illustration, following are the important points to be considered.<br>
+<br>
+Index starts with 0.<br>
+
+Array length is 10 which means it can store 10 elements.<br>
+
+Each element can be accessed via its index. For example, we can fetch an element at index 6 as 9.
+<br>
+<br>
+<b>Basic Operations</b><br>
+Following are the basic operations supported by an array.<br>
+<br>
+
+<b>Traverse</b> − print all the array elements one by one.
+<br>
+<br>
+<b>Insertion</b> − Adds an element at the given index.
+<br>
+<br>
+<b>Deletion</b> − Deletes an element at the given index.
+<br>
+<br>
+<b>Search</b> − Searches an element using the given index or by the value.<br>
+<br>
+
+<b>Update</b> − Updates an element at the given index.
+<br>
+<br>
+In C, when an array is initialized with size, then it assigns defaults values to its elements in following order.
+<br>
+Data Type Default Value<br>
+bool  false<br>
+char  0<br>
+int 0<br>
+float 0.0<br>
+double  0.0f<br>
+void  <br>
+wchar_t 0<br>
+<br>
+
+<b>Insertion Operation</b><br>
+Insert operation is to insert one or more data elements into an array. Based on the requirement, a new element can be added at the beginning, end, or any given index of array.<br>
+
+Here, we see a practical implementation of insertion operation, where we add data at the end of the array −<br>
+<br>
+
+<b>Algorithm</b><br>
+Let Array be a linear unordered array of MAX elements.
+<br>
+Example<br>
+Result<br>
+
+Let LA be a Linear Array (unordered) with N elements and K is a positive integer such that K<=N. Following is the algorithm where ITEM is inserted into the Kth position of LA −<br>
+
+1. Start<br>
+2. Set J = N<br>
+3. Set N = N+1<br>
+4. Repeat steps 5 and 6 while J &lt= K<br>
+5. Set LA[J+1] = LA[J]<br>
+6. Set J = J-1<br>
+7. Set LA[K] = ITEM<br>
+8. Stop<br>
+Example<br>
+Following is the implementation of the above algorithm −<br>
+
+<code>
+  <blockquote>
+#include &lt stdio.h &gt<br>
+
+main() {<br>
+   int LA[] = {1,3,5,7,8};<br>
+   int item = 10, k = 3, n = 5;<br>
+   int i = 0, j = n;<br>
+   
+   printf( "The original array elements are :\n ");
+<br>
+   for(i = 0; i &lt n; i++) {<br>
+      printf(LA[%d] = %d \n, i, LA[i]);<br>
+   }<br>
+
+   n = n + 1;<br>
+  
+   while( j &gt = k) {<br>
+      LA[j+1] = LA[j];<br>
+      j = j - 1;<br>
+   }<br>
+
+   LA[k] = item;<br>
+
+   printf("The array elements after insertion :\n");<br>
+
+   for(i = 0; i &lt n; i++) {<br>
+      printf(LA[%d] = %d \n, i, LA[i]);<br>
+   }<br>
+}<br>
+</blockquote>
+</code>
+When we compile and execute the above program, it produces the following result −<br>
+<br>
+
+<b>Output</b><br>
+The original array elements are :<br>
+LA[0] = 1 <br>
+LA[1] = 3 <br>
+LA[2] = 5 <br>
+LA[3] = 7 <br>
+LA[4] = 8 <br>
+The array elements after insertion :<br>
+LA[0] = 1 <br>
+LA[1] = 3 <br>
+LA[2] = 5 <br>
+LA[3] = 10 <br>
+LA[4] = 7 <br>
+LA[5] = 8 <br>
+<br>
+
+<b>Deletion Operation</b><br>
+Deletion refers to removing an existing element from the array and re-organizing all elements of an array.<br>
+<br>
+
+<b>Algorithm</b><br>
+Consider LA is a linear array with N elements and K is a positive integer such that K &lt=N. Following is the algorithm to delete an element available at the Kth position of LA.<br>
+
+1. Start<br>
+2. Set J = K<br>
+3. Repeat steps 4 and 5 while J &lt N<br>
+4. Set LA[J] = LA[J + 1]<br>
+5. Set J = J+1<br>
+6. Set N = N-1<br>
+7. Stop<br>
+Example<br>
+Following is the implementation of the above algorithm −<br>
+<code>
+  
+#include &ltstdio.h&gt<br>
+
+void main() {<br>
+   int LA[] = {1,3,5,7,8};<br>
+   int k = 3, n = 5;<br>
+   int i, j;<br>
+   
+   printf("The original array elements are :\n");<br>
+  
+   for(i = 0; i &lt n; i++) {<br>
+      printf("LA[%d] = %d \n", i, LA[i]);<br>
+   }<br>
+    
+   j = k;<br>
+  
+   while( j &lt n) {<br>
+      LA[j-1] = LA[j];<br>
+      j = j + 1;<br>
+   }<br>
+  
+   n = n -1;<br>
+   
+   printf("The array elements after deletion :\n");<br>
+  
+   for(i = 0; i &lt n; i++) {<br>
+      printf("LA[%d] = %d \n", i, LA[i]);<br>
+   }<br>
+}<br>
+
+</code>
+When we compile and execute the above program, it produces the following result −<br>
+<br>
+
+<b>Output</b><br>
+The original array elements are :<br>
+LA[0] = 1 <br>
+LA[1] = 3 <br>
+LA[2] = 5 <br>
+LA[3] = 7 <br>
+LA[4] = 8 <br>
+The array elements after deletion :<br>
+LA[0] = 1 <br>
+LA[1] = 3 <br>
+LA[2] = 7 <br>
+LA[3] = 8 <br>
+<br>
+
+<b>Search Operation</b><br>
+You can perform a search for an array element based on its value or its index.<br>
+<br>
+
+<b>Algorithm</b><br>
+Consider LA is a linear array with N elements and K is a positive integer such that K<=N. Following is the algorithm to find an element with a value of ITEM using sequential search.<br>
+
+1. Start<br>
+2. Set J = 0<br>
+3. Repeat steps 4 and 5 while J &lt N<br>
+4. IF LA[J] is equal ITEM THEN GOTO STEP 6<br>
+5. Set J = J +1<br>
+6. PRINT J, ITEM<br>
+7. Stop<br>
+Example<br>
+Following is the implementation of the above algorithm −<br>
+
+<code>
+#include &ltstdio.h&gt<br>
+
+void main() {<br>
+   int LA[] = {1,3,5,7,8};<br>
+   int item = 5, n = 5;<br>
+   int i = 0, j = 0;<br>
+   
+   printf("The original array elements are :\n");<br>
+  
+   for(i = 0; i &lt n; i++) {<br>
+      printf("LA[%d] = %d \n", i, LA[i]);<br>
+   }<br>
+    
+   while( j &lt n){<br>
+      if( LA[j] == item ) {<br>
+         break;<br>
+      }<br>
+    
+      j = j + 1;<br>
+   }<br>
+  
+   printf("Found element %d at position %d\n", item, j+1);<br>
+}<br>
+</code>
+When we compile and execute the above program, it produces the following result −<br>
+<br>
+
+<b>Output</b><br>
+The original array elements are :<br>
+LA[0] = 1 <br>
+LA[1] = 3 <br>
+LA[2] = 5 <br>
+LA[3] = 7 <br>
+LA[4] = 8 <br>
+Found element 5 at position 3<br>
+<br>
+
+<b>Update Operation</b><br>
+Update operation refers to updating an existing element from the array at a given index.<br>
+<br>
+
+<b>Algorithm</b><br>
+Consider LA is a linear array with N elements and K is a positive integer such that K&lt=N. Following is the algorithm to update an element available at the Kth position of LA.<br>
+
+1. Start<br>
+2. Set LA[K-1] = ITEM<br>
+3. Stop<br>
+Example<br>
+Following is the implementation of the above algorithm −<br>
+
+ <code>
+#include &ltstdio.h&gt<br>
+
+void main() {<br>
+   int LA[] = {1,3,5,7,8};<br>
+   int k = 3, n = 5, item = 10;<br>
+   int i, j;<br>
+   
+   printf("The original array elements are :\n");<br>
+  
+   for(i = 0; i &lt n; i++) {<br>
+      printf("LA[%d] = %d \n", i, LA[i]);<br>
+   }<br>
+  
+   LA[k-1] = item;<br>
+
+   printf("The array elements after updation :\n");<br>
+  
+   for(i = 0; i &lt n; i++) {<br>
+      printf("LA[%d] = %d \n", i, LA[i]);<br>
+   }<br>
+}<br>
+When we compile and execute the above program, it produces the following result −<br>
+<br>
+
+<b>Output</b><br>
+The original array elements are :<br>
+LA[0] = 1 <br>
+LA[1] = 3 <br>
+LA[2] = 5 <br>
+LA[3] = 7 <br>
+LA[4] = 8 <br>
+The array elements after updation :<br>
+LA[0] = 1 <br>
+LA[1] = 3 <br>
+LA[2] = 10 <br>
+LA[3] = 7 <br>
+LA[4] = 8 <br>
+</p>
+      </div> 
+    <footer class="panel-footer">
+        <div class="container">
+           <div class="row">
+             <section id="hours" class="col-sm-4">
+                <span>Hours:</span><br>
+                24*7 Open 
+                <hr class="visible-xs">
+             </section>
+             <section id="address" class="col-sm-4">
+                <span>Address:</span><br>
+                Jaypee University<br>
+                AB Road Guna
+                <hr class="visible-xs">
+             </section>  
+             <section id="testimonials" class="col-sm-4">
+                <p>"The best Education Website"</p>
+                <hr class="visible-xs">
+             </section> 
+            </div>
+            <div class="text-center">&copy; Copyright Juet Study Portal </div>
+         </div>
+      </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>	
+</html>
